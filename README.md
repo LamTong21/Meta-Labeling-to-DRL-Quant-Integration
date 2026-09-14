@@ -1,8 +1,8 @@
 # Architectural Evolution of Multi-Asset Quantitative Trading Frameworks in Emerging Markets: From Statistical Meta-Labeling to Deep Reinforcement Learning
 
-![Python 3.10+](https://www.python.org/)
-![Code style: black](https://github.com/psf/black)
-![License: MIT](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 An end-to-end quantitative research framework documenting the paradigm transition from a supervised two-stage econometric meta-labeling pipeline (**Modeling09**) to an on-policy continuous Deep Reinforcement Learning (DRL) agent operating under Proximal Policy Optimization (**Modeling10**), customized for emerging equity market microstructures (VN-Index / HOSE).
 
@@ -89,6 +89,7 @@ SAMPLE DATA AUDIT PROFILE:
 - Total Missing Values (NaN): Exactly 2 per ticker (Isolated strictly to t=0)
 - Physical Bar Geometry: Min(High - max(Open, Close)) >= 0, Min(min(Open, Close) - Low) >= 0
 ================================================================================
+```
 
 Across all constituent tickers, exactly two `NaN` values occur, originating from the initial backward difference lag operator for $\ln(C_t / C_{t-1})$ and $\ln(O_t / C_{t-1})$ at index $t=0$.
 
@@ -105,6 +106,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 # Install dependencies
+
 pip install -r requirements.txt
 ```
 
