@@ -1,0 +1,94 @@
+industry_name,Weight_Final_Constrained,Ticker,year
+Vận tải - kho bãi,0.0611,DVP,2023
+Vận tải - kho bãi,0.0489,TCL,2023
+Xây dựng,0.0255,REE,2023
+SX Nhựa - Hóa chất,0.04,BMP,2023
+Thực phẩm - Đồ uống,0.0567,SMB,2023
+SX Nhựa - Hóa chất,0.0126,LIX,2023
+SX Nhựa - Hóa chất,0.0213,CSV,2023
+Bán buôn,0.0143,VMD,2023
+Tiện ích,0.0119,DRL,2023
+Tiện ích,0.01,SBA,2023
+SX Phụ trợ,0.0306,TLG,2023
+SX Nhựa - Hóa chất,0.0266,DPR,2023
+Xây dựng,0.0142,HTI,2023
+Tiện ích,0.0269,NT2,2023
+Tiện ích,0.0593,VPD,2023
+Tiện ích,0.0607,SJD,2023
+Vận tải - kho bãi,0.0359,NCT,2023
+Chăm sóc sức khỏe,0.0047,TRA,2023
+Tiện ích,0.0515,SHP,2023
+SX Nhựa - Hóa chất,0.0211,DGC,2023
+Thực phẩm - Đồ uống,0.068,SAB,2023
+SX Hàng gia dụng,0.0358,TCM,2023
+SX Hàng gia dụng,0.0253,HTG,2023
+Bất động sản,0.0218,HDG,2023
+Công nghệ và thông tin,0.0371,FPT,2023
+Bán lẻ,0.0271,MWG,2023
+Sản phẩm cao su,0.0268,CSM,2023
+Chế biến Thủy sản,0.0294,FMC,2023
+"Dịch vụ lưu trú, ăn uống, giải trí",0.0807,DSN,2023
+Khai khoáng,0.0141,NNC,2023
+SX Phụ trợ,0.0371,DHC,2024
+Thực phẩm - Đồ uống,0.0671,MCH,2024
+Vận tải - kho bãi,0.0575,DVP,2024
+SX Nhựa - Hóa chất,0.0207,DGC,2024
+SX Nhựa - Hóa chất,0.0205,CSV,2024
+Tiện ích,0.0087,DRL,2024
+Vận tải - kho bãi,0.0113,NCT,2024
+Tiện ích,0.0153,SHP,2024
+SX Nhựa - Hóa chất,0.0328,BMP,2024
+SX Nhựa - Hóa chất,0.0116,LIX,2024
+Sản phẩm cao su,0.0027,BRC,2024
+Tiện ích,0.0555,SJD,2024
+Tiện ích,0.0077,SBA,2024
+Vận tải - kho bãi,0.0589,SCS,2024
+Xây dựng,0.0057,HTI,2024
+SX Hàng gia dụng,0.0164,HTG,2024
+Chế biến Thủy sản,0.0404,ABT,2024
+Vận tải - kho bãi,0.0512,TCL,2024
+Thực phẩm - Đồ uống,0.0284,SMB,2024
+Xây dựng,0.0021,LGC,2024
+Xây dựng,0.0273,REE,2024
+SX Nhựa - Hóa chất,0.0025,ADP,2024
+SX Nhựa - Hóa chất,0.0269,DPR,2024
+Tiện ích,0.0437,TDM,2024
+Tiện ích,0.0792,CHP,2024
+Tiện ích,0.0738,GHC,2024
+Công nghệ và thông tin,0.0365,FPT,2024
+Bất động sản,0.0212,HDG,2024
+Vật liệu xây dựng,0.0238,HT1,2024
+Bán lẻ,0.0247,MWG,2024
+"Dịch vụ lưu trú, ăn uống, giải trí",0.0796,DSN,2024
+Khai khoáng,0.009,NNC,2024
+SX Hàng gia dụng,0.0102,SAV,2025
+SX Phụ trợ,0.0396,TLG,2025
+Thực phẩm - Đồ uống,0.0343,SMB,2025
+SX Nhựa - Hóa chất,0.0381,BMP,2025
+SX Nhựa - Hóa chất,0.0103,TRC,2025
+Tiện ích,0.0678,SJD,2025
+SX Nhựa - Hóa chất,0.0026,ADP,2025
+SX Hàng gia dụng,0.0214,HTG,2025
+Xây dựng,0.0054,HTI,2025
+Vận tải - kho bãi,0.0656,TCL,2025
+Vận tải - kho bãi,0.0694,DVP,2025
+SX Nhựa - Hóa chất,0.0237,CSV,2025
+Xây dựng,0.0058,LGC,2025
+Sản phẩm cao su,0.0033,BRC,2025
+Chế biến Thủy sản,0.0519,ABT,2025
+Tiện ích,0.0389,TTA,2025
+Tiện ích,0.0212,VPD,2025
+Tiện ích,0.0869,GHC,2025
+Tiện ích,0.0144,SHP,2025
+Tiện ích,0.01,DRL,2025
+Thực phẩm - Đồ uống,0.0673,MCH,2025
+Bán buôn,0.0119,VMD,2025
+Xây dựng,0.034,REE,2025
+Vận tải - kho bãi,0.0147,NCT,2025
+Vật liệu xây dựng,0.0286,HT1,2025
+Vận tải - kho bãi,0.0302,VTO,2025
+SX Nhựa - Hóa chất,0.0311,DPR,2025
+Vận tải - kho bãi,0.0274,VIP,2025
+SX Phụ trợ,0.0366,PTB,2025
+Xây dựng,0.028,CTI,2025
+Thực phẩm - Đồ uống,0.0694,VNM,2025

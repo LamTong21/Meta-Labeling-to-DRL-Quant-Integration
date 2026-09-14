@@ -1,0 +1,46 @@
+experiment_meta:
+  model_designation: "Modeling09"
+  paradigm: "Supervised_Meta_Labeling"
+  target_universe_size: 49
+
+primary_signal:
+  method: "ma_crossover"              # [ma_crossover, momentum, breakout]
+  fast_window: 10
+  slow_window: 30
+  price_column: "close_adj"
+
+triple_barrier:
+  horizon: 5                          # Stopping time vertical barrier h (days)
+  pt_sl_ratio: 1.5                    # Multiplier k on Parkinson volatility sigma_t
+  min_return_hurdle: 0.005            # Minimum hurdle margin (50 bps)
+  volatility_column: "parkinson_vol"
+
+econometric_filters:
+  significance_level: 0.05
+  tests:
+    - "augmented_dickey_fuller"       # ADF unit root test
+    - "kpss"                          # Trend stationarity verification
+    - "ljung_box"                     # Residual autocorrelation test (lags=10)
+    - "engle_arch_lm"                 # Volatility clustering check (lags=10)
+
+information_theory:
+  mi_threshold: 0.005                 # Mutual information filter threshold I(X; Y*)
+  n_neighbors: 3
+  entropy_bins: 50
+
+estimator:
+  type: "lightgbm"                    # [lightgbm, xgboost, random_forest]
+  hyperparameters:
+    n_estimators: 100
+    learning_rate: 0.05
+    max_depth: 5
+    num_leaves: 31
+    random_state: 42
+    verbose: -1
+
+calibration:
+  method: "isotonic"                  # [isotonic, sigmoid]
+  cv_splits: 5                        # TimeSeriesSplit folds for out-of-fold predictions
+  bet_sizing:
+    threshold: 0.5
+    scale: 2.0                        # w_t = sign(y_hat_t) * 2 * (p_cal - 0.5)

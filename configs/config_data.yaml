@@ -1,0 +1,19 @@
+data_engine:
+  portfolio_path: "data/raw/final_portfolio.csv"
+  cache_dir: "data/raw/data_cache"
+  start_date: "2018-07-02"
+  end_date: "2026-05-29"
+  source: "KBS"                       # Source endpoint for vnstock Quote API
+  benchmark_symbol: "VNINDEX"
+  asset_suffix: ".VN"
+
+geometry_auditing:
+  enforce_strict_bounds: true         # High >= max(Open, Close) and Low <= min(Open, Close)
+  drop_negative_quotes: true          # Low > 0 and Volume >= 0
+  max_calendar_gap_days: 7            # Mask suspension gaps Delta t > 7 as NaN
+  fill_missing_market_returns: 0.0
+
+decomposition:
+  volatility_proxy: "parkinson"       # Parkinson extreme-value log-range
+  calculate_overnight: true
+  calculate_intraday: true

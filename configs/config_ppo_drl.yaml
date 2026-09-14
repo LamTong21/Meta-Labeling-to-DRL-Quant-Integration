@@ -1,0 +1,50 @@
+experiment_meta:
+  model_designation: "Modeling10"
+  paradigm: "Deep_Reinforcement_Learning"
+  algorithm: "PPO"                    # Proximal Policy Optimization
+
+environment:
+  lookback_window: 20                 # Sequence length L of past bars
+  cash_asset_index: 0                 # w_0 reserved for risk-free cash
+  features_per_asset:
+    - "log_return"
+    - "parkinson_vol"
+    - "volume_ratio_sma20"
+  macro_features:
+    - "mkt_return"                    # Aligned VN-Index benchmark
+
+frictions_and_microstructure:
+  apply_frictions: true
+  statutory_price_band: 0.07          # Daily HOSE +/- 7% limit band
+  settlement_latency_days: 1.5        # T+1.5 inventory liquidation lock
+  transaction_cost: 0.0015            # 15 bps (commission + clearing fees + taxes)
+
+economic_reward:
+  type: "downside_semi_variance"
+  lambda_penalty: 2.0                 # Downside semi-variance risk-aversion parameter
+  var_threshold: -0.02                # Daily VaR semi-variance cutoff (-2.0%)
+  turnover_penalty_active: true
+
+ppo_hyperparameters:
+  policy_network: "MlpPolicy"         # [MlpPolicy, simplex_mlp, dirichlet]
+  learning_rate: 0.0003
+  n_steps: 2048                       # Trajectory buffer size before PPO update
+  batch_size: 64
+  n_epochs: 10
+  gamma: 0.99                         # Infinite-horizon discount factor
+  gae_lambda: 0.95                    # Generalized Advantage Estimation parameter
+  clip_range: 0.2                     # Clipped surrogate objective epsilon
+  ent_coef: 0.01                      # Entropy regularization coefficient
+  vf_coef: 0.5                        # Value function loss coefficient
+  max_grad_norm: 0.5
+  total_timesteps: 150000
+
+network_architecture:
+  net_arch:
+    pi: [256, 128]                    # Actor MLP hidden layers
+    vf: [256, 128]                    # Critic MLP hidden layers
+  activation_fn: "ReLU"
+
+systemic_safeguards:
+  monitor_cash_trap: true             # Trigger alert if w_0 > 95% over consecutive sessions
+  min_entropy_threshold: 0.20         # Threshold below which policy entropy collapses
